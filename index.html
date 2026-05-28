@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,7 +23,7 @@
       <div class="countdown-content">
         <p class="eyebrow">A little birthday surprise is waiting</p>
         <h1 id="countdownTitle">For my loveyy</h1>
-        <p class="intro">I love you, my loveyy. This little surprise is waiting for you.</p>
+        <p class="intro">I love you, my loveyy. This little <button class="surprise-word" id="surpriseWord" type="button">surprise</button> is waiting for you.</p>
 
         <div class="countdown-grid" aria-live="polite">
           <div class="time-box">
@@ -56,63 +57,122 @@
     </section>
 
     <section class="surprise-screen hidden" id="surpriseScreen" aria-labelledby="birthdayTitle">
-      <div class="floating-clovers" aria-hidden="true">
-        <span class="clover c1"></span>
-        <span class="clover c2"></span>
-        <span class="clover c3"></span>
-        <span class="clover c4"></span>
-        <span class="clover c5"></span>
-      </div>
+      <section class="scrapbook" id="scrapbook" aria-labelledby="birthdayTitle">
+        <article class="mail-intro scrap-page" id="mailIntro">
+        <span class="drift-star ds-a" aria-hidden="true"></span>
+        <span class="drift-star ds-b" aria-hidden="true"></span>
+        <span class="drift-star ds-c" aria-hidden="true"></span>
+        <p class="script-title">YOU GOT A MAIL!</p>
+        <div class="envlope-wrapper">
+          <div id="envelope" class="close" role="button" tabindex="0" aria-expanded="false" aria-controls="scrapbook">
+            <div class="front flap"></div>
+            <div class="front pocket"></div>
+            <div class="template-letter">
+              <div class="words line1">To: my loveyy</div>
+              <div class="words line2">I love you so much</div>
+              <div class="words line3">Happy birthday, my love</div>
+              <div class="words line4">You are my favorite person</div>
+            </div>
+            <div class="hearts" aria-hidden="true">
+              <div class="heart a1"></div>
+              <div class="heart a2"></div>
+              <div class="heart a3"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mail-actions" aria-label="Envelope controls">
+          <button class="mail-control" id="openMailButton" type="button">Open</button>
+          <button class="mail-control" id="closeMailButton" type="button">Close</button>
+        </div>
+        <p class="tap-note">Click the envelope to open</p>
+        </article>
 
-      <header class="birthday-hero">
-        <p class="eyebrow">June 2, 12:00 AM</p>
-        <h1 id="birthdayTitle">Happy Birthday, my loveyy</h1>
-        <p class="hero-copy">A calm little blue world for the girl who makes ordinary days feel special.</p>
-      </header>
+        <div class="blue-clovers" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
 
-      <section class="scene-grid" aria-label="Birthday animations">
-        <article class="scene-panel bouquet-panel">
-          <h2>Bouquet</h2>
-          <div class="bouquet" aria-hidden="true">
-            <div class="wrap"></div>
-            <div class="stem s1"></div>
-            <div class="stem s2"></div>
-            <div class="stem s3"></div>
-            <div class="flower f1"><span></span><span></span><span></span><span></span><b></b></div>
-            <div class="flower f2"><span></span><span></span><span></span><span></span><b></b></div>
-            <div class="flower f3"><span></span><span></span><span></span><span></span><b></b></div>
+        <article class="scrap-page date-page">
+          <p class="script-title">What date is it today?</p>
+          <div class="calendar-card">
+            <span class="month">June</span>
+            <strong>2</strong>
+            <span class="year">2026</span>
+          </div>
+          <div class="scrap-cake" aria-hidden="true">
+            <span class="scrap-flame"></span>
+            <span class="scrap-candle"></span>
+            <span class="scrap-cake-top"></span>
+            <span class="scrap-cake-base"></span>
+          </div>
+          <span class="paper-flower pf-a" aria-hidden="true"></span>
+          <span class="paper-flower pf-b" aria-hidden="true"></span>
+          <p class="small-caption">The day made for celebrating you.</p>
+        </article>
+
+        <article class="scrap-page photo-page soft-blue">
+          <h1 id="birthdayTitle">Happy Birthday, my loveyy</h1>
+          <p class="page-line">It is the birthday of the girl who makes life feel softer.</p>
+          <div class="stamp-row">
+            <div class="photo-stamp"><img class="random-photo" alt="Memory with my loveyy"></div>
+            <div class="photo-stamp tall"><img class="random-photo" alt="Memory with my loveyy"></div>
+            <div class="photo-stamp"><img class="random-photo" alt="Memory with my loveyy"></div>
           </div>
         </article>
 
-        <article class="scene-panel cake-panel">
-          <h2>Cake</h2>
-          <div class="cake" aria-hidden="true">
-            <div class="flame"></div>
-            <div class="candle"></div>
-            <div class="cake-top"></div>
-            <div class="cake-mid"></div>
-            <div class="cake-base"></div>
-            <div class="sparkle sp1"></div>
-            <div class="sparkle sp2"></div>
-            <div class="sparkle sp3"></div>
+        <article class="scrap-page split-page">
+          <div class="photo-stack">
+            <div class="photo-card"><img class="random-photo" alt="Cute memory"></div>
+            <div class="photo-card"><img class="random-photo" alt="Pretty memory"></div>
+            <div class="photo-card"><img class="random-photo" alt="Favorite memory"></div>
+          </div>
+          <p class="big-script">The birthday of my favorite girl who became my comfort, happiness, and favorite notification.</p>
+        </article>
+
+        <article class="scrap-page stripe-page">
+          <div class="photo-grid">
+            <div class="photo-card"><img class="random-photo" alt="Memory with my loveyy"></div>
+            <div class="photo-card"><img class="random-photo" alt="Memory with my loveyy"></div>
+            <div class="photo-card"><img class="random-photo" alt="Memory with my loveyy"></div>
+            <div class="photo-card"><img class="random-photo" alt="Memory with my loveyy"></div>
+          </div>
+          <p class="wide-script">The girl I thank the universe for.</p>
+        </article>
+
+        <article class="scrap-page love-page">
+          <p class="big-script">Because of that, let me tell you what I love the most about you.</p>
+          <div class="love-cloud">
+            <span>I love your laugh.</span>
+            <span>I love your soft heart.</span>
+            <span>I love how you care.</span>
+            <span>I love your smile.</span>
+            <span>I love how you make my day light.</span>
+            <span>I love you for being you.</span>
           </div>
         </article>
 
-        <article class="scene-panel mail-panel">
-          <h2>Birthday Mail</h2>
-          <button class="mail" id="mailButton" type="button" aria-expanded="false" aria-controls="birthdayMessage">
-            <span class="envelope-back"></span>
-            <span class="letter">
-              <span>To my loveyy</span>
-            </span>
-            <span class="envelope-front"></span>
-            <span class="envelope-flap"></span>
-          </button>
-          <div class="message-card" id="birthdayMessage">
-            <p>Happy birthday, my loveyy.</p>
-            <p>I hope today feels peaceful, sweet, and full of little reasons to smile. You deserve a love that is gentle, patient, and always proud of you.</p>
-            <p>Thank you for being you. I made this tiny surprise because you are my favorite person.</p>
-            <strong>Always yours.</strong>
+        <article class="scrap-page photo-page">
+          <div class="stamp-row">
+            <div class="photo-stamp"><img class="random-photo" alt="Memory with my loveyy"></div>
+            <div class="photo-stamp"><img class="random-photo" alt="Memory with my loveyy"></div>
+            <div class="photo-stamp"><img class="random-photo" alt="Memory with my loveyy"></div>
+          </div>
+          <p class="big-script">And of course, I love you for being you.</p>
+        </article>
+
+        <article class="scrap-page gift-page">
+          <p class="page-line">This celebration would not be complete without a gift, so here is one for you.</p>
+          <div class="gift-reveal" id="giftReveal">
+            <button class="gift-box" id="giftBox" type="button" aria-label="Open flower gift">
+              <span class="gift-lid"></span>
+              <span class="gift-body"></span>
+              <span class="gift-bow"></span>
+            </button>
+            <p class="tap-note">Click the box to open</p>
+          </div>
+          <div class="flower-finale hidden" id="flowerFinale">
+            <h2>Here is your flower, my love</h2>
+            <p>A little blue bloom for the girl who makes my world softer.</p>
+            <iframe id="flowerFrame" title="Blue flower animation" data-src="flower/index.html"></iframe>
           </div>
         </article>
       </section>
