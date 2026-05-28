@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For my loveyy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="countdown-screen" id="countdownScreen" aria-labelledby="countdownTitle">
+      <div class="sky" aria-hidden="true">
+        <span class="star star-a"></span>
+        <span class="star star-b"></span>
+        <span class="star star-c"></span>
+        <span class="moon"></span>
+      </div>
+
+      <div class="countdown-content">
+        <p class="eyebrow">A little birthday surprise is waiting</p>
+        <h1 id="countdownTitle">For my loveyy</h1>
+        <p class="intro">It opens exactly on June 2 at 12:00 AM.</p>
+
+        <div class="countdown-grid" aria-live="polite">
+          <div class="time-box">
+            <strong id="days">00</strong>
+            <span>Days</span>
+          </div>
+          <div class="time-box">
+            <strong id="hours">00</strong>
+            <span>Hours</span>
+          </div>
+          <div class="time-box">
+            <strong id="minutes">00</strong>
+            <span>Minutes</span>
+          </div>
+          <div class="time-box">
+            <strong id="seconds">00</strong>
+            <span>Seconds</span>
+          </div>
+        </div>
+
+        <div class="preview-stage" aria-hidden="true">
+          <div class="sleeping-bouquet">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="preview-note">Something blue, soft, and made only for you.</div>
+        </div>
+
+        <button class="soft-button hidden" id="openNowButton" type="button">Open your surprise</button>
+      </div>
+    </section>
+
+    <section class="surprise-screen hidden" id="surpriseScreen" aria-labelledby="birthdayTitle">
+      <div class="floating-clovers" aria-hidden="true">
+        <span class="clover c1"></span>
+        <span class="clover c2"></span>
+        <span class="clover c3"></span>
+        <span class="clover c4"></span>
+        <span class="clover c5"></span>
+      </div>
+
+      <header class="birthday-hero">
+        <p class="eyebrow">June 2, 12:00 AM</p>
+        <h1 id="birthdayTitle">Happy Birthday, my loveyy</h1>
+        <p class="hero-copy">A calm little blue world for the girl who makes ordinary days feel special.</p>
+      </header>
+
+      <section class="scene-grid" aria-label="Birthday animations">
+        <article class="scene-panel bouquet-panel">
+          <h2>Bouquet</h2>
+          <div class="bouquet" aria-hidden="true">
+            <div class="wrap"></div>
+            <div class="stem s1"></div>
+            <div class="stem s2"></div>
+            <div class="stem s3"></div>
+            <div class="flower f1"><span></span><span></span><span></span><span></span><b></b></div>
+            <div class="flower f2"><span></span><span></span><span></span><span></span><b></b></div>
+            <div class="flower f3"><span></span><span></span><span></span><span></span><b></b></div>
+          </div>
+        </article>
+
+        <article class="scene-panel cake-panel">
+          <h2>Cake</h2>
+          <div class="cake" aria-hidden="true">
+            <div class="flame"></div>
+            <div class="candle"></div>
+            <div class="cake-top"></div>
+            <div class="cake-mid"></div>
+            <div class="cake-base"></div>
+            <div class="sparkle sp1"></div>
+            <div class="sparkle sp2"></div>
+            <div class="sparkle sp3"></div>
+          </div>
+        </article>
+
+        <article class="scene-panel mail-panel">
+          <h2>Birthday Mail</h2>
+          <button class="mail" id="mailButton" type="button" aria-expanded="false" aria-controls="birthdayMessage">
+            <span class="envelope-back"></span>
+            <span class="letter">
+              <span>To my loveyy</span>
+            </span>
+            <span class="envelope-front"></span>
+            <span class="envelope-flap"></span>
+          </button>
+          <div class="message-card" id="birthdayMessage">
+            <p>Happy birthday, my loveyy.</p>
+            <p>I hope today feels peaceful, sweet, and full of little reasons to smile. You deserve a love that is gentle, patient, and always proud of you.</p>
+            <p>Thank you for being you. I made this tiny surprise because you are my favorite person.</p>
+            <strong>Always yours.</strong>
+          </div>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
