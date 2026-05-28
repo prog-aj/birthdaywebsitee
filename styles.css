@@ -20,6 +20,10 @@ body {
   min-height: 100%;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   margin: 0;
   font-family: "Nunito", system-ui, sans-serif;
@@ -46,6 +50,7 @@ button {
 .countdown-screen,
 .surprise-screen {
   min-height: 100vh;
+  min-height: 100svh;
   position: relative;
   overflow: hidden;
 }
@@ -713,43 +718,149 @@ h1 {
 }
 
 @media (max-width: 860px) {
+  h1 {
+    font-size: clamp(2.45rem, 11vw, 4.8rem);
+  }
+
   .scene-grid {
     grid-template-columns: 1fr;
+    max-width: 520px;
   }
 
   .scene-panel {
-    min-height: 350px;
+    min-height: 340px;
   }
 }
 
 @media (max-width: 560px) {
   .countdown-screen {
-    padding: 14px;
+    align-items: start;
+    padding: 12px;
   }
 
   .countdown-content {
-    padding: 28px 16px;
+    width: 100%;
+    min-height: calc(100svh - 24px);
+    display: grid;
+    align-content: center;
+    padding: 24px 14px;
   }
 
   .countdown-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
   }
 
   .time-box {
-    min-height: 96px;
+    min-height: 88px;
+  }
+
+  .time-box strong {
+    font-size: 2.15rem;
+  }
+
+  .time-box span {
+    font-size: 0.76rem;
+  }
+
+  .intro,
+  .hero-copy {
+    font-size: 0.98rem;
+    line-height: 1.5;
+  }
+
+  .preview-stage {
+    min-height: 98px;
+    margin-top: 20px;
+  }
+
+  .moon {
+    width: 54px;
+    top: 18px;
+    right: 18px;
+  }
+
+  .surprise-screen {
+    padding: 18px 12px 34px;
+    overflow: visible;
   }
 
   .birthday-hero {
-    min-height: 30vh;
-    padding-top: 18px;
+    min-height: auto;
+    padding: 24px 8px 26px;
   }
 
   .scene-panel {
+    min-height: 318px;
     padding: 18px;
+  }
+
+  .scene-panel h2 {
+    font-size: 1.35rem;
   }
 
   .bouquet,
   .cake {
     transform: translateX(-50%) scale(0.9);
+  }
+
+  .mail {
+    transform: scale(0.92);
+    transform-origin: center top;
+    margin-top: 42px;
+    margin-bottom: 0;
+  }
+
+  .message-card {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .eyebrow {
+    font-size: 0.72rem;
+  }
+
+  h1 {
+    font-size: clamp(2.18rem, 12vw, 3rem);
+  }
+
+  .countdown-content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .time-box {
+    min-height: 78px;
+  }
+
+  .time-box strong {
+    font-size: 1.85rem;
+  }
+
+  .scene-panel {
+    min-height: 292px;
+    padding: 16px;
+  }
+
+  .bouquet {
+    bottom: 4px;
+    transform: translateX(-50%) scale(0.78);
+  }
+
+  .cake {
+    bottom: 12px;
+    transform: translateX(-50%) scale(0.78);
+  }
+
+  .mail {
+    transform: scale(0.78);
+    margin-top: 34px;
+  }
+
+  .message-card.show {
+    max-height: 500px;
   }
 }
